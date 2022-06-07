@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logoImg from './img/caballo.jpg';
+import NavBar from './components/NavBar'
 
 function App() {
+
+  const stylesH1 = {
+    color: 'blue',
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar/>
+        <h1 style={stylesH1}>
+          Bienvenidos
+        </h1>
+        <img src={ logoImg } alt="logo" />
+        <br/>
+        <hr/>
+        <p style= { {marginTop: "120px"} }>Hola caballos</p>
       </header>
     </div>
   );
