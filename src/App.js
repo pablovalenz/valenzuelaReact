@@ -1,11 +1,9 @@
 import logoImg from './assets/caballo.jpg';
+import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar'
 
 function App() {
 
-  const stylesH1 = {
-    color: 'blue',
-  }
 
   const stylesImg = {
     width: '500px',
@@ -16,9 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <h1 style={stylesH1}>
-          Bienvenidos
-        </h1>
+        <ItemListContainer props/>
         <br/>
         <hr/>
         <img style={stylesImg} src={logoImg} />
