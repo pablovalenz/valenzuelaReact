@@ -1,10 +1,11 @@
+import React, { Fragment } from 'react'
 
 
-function ItemListContainer(props) {
+const ItemListContainer = (props) => {
     return (
-        <div>
-            <p>Saludos futura lista contenedora</p>
-        </div>
+        <Fragment>
+            <p>Saludos futura lista contenedora {props.saludo}</p>
+        </Fragment>
     )
 }
 

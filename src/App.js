@@ -14,7 +14,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <ItemListContainer props/>
+        <ItemListContainer saludo="Hola!" />
+        <ItemListContainer saludo="Hello!" />
         <br/>
         <hr/>
         <img style={stylesImg} src={logoImg} />
