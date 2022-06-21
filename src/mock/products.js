@@ -1,23 +1,23 @@
 export const productos = [
     {
         id: 1,
-        name: 'Remera',
+        name: 'Remera Blanca',
         price: 200,
         stock: 4,
 
         img: './img/remera.jpg',
-        category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        category: 'Otra Remeras',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
         id: 2,
-        name: 'Remera',
-        price: 200,
+        name: 'Otra Reme',
+        price: 800,
         stock: 4,
 
         img: './img/remera.jpg',
         category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const productos = [
 
         img: './img/remera.jpg',
         category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export const productos = [
 
         img: './img/remera.jpg',
         category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
         id: 5,
@@ -47,16 +47,16 @@ export const productos = [
 
         img: './img/remera.jpg',
         category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
         id: 6,
         name: 'Remera',
         price: 200,
         stock: 4,
-
+ 
         img: './img/remera.jpg',
         category: 'remeras',
-        description: 'lorem ipsun ipsum',
+        description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
 ]

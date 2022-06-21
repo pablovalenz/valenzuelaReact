@@ -21,38 +21,38 @@ const ItemListContainer = (props) => {
         })
     }, []);
 
-    const arrayData = [
-        {
-          id: "1",
-          name: "Mi producto",
-          description: "El mejor producto de la tienda",
-          stock: 9,
-        },
-        {
-          id: "2",
-          name: "Otro producto",
-          description: "Otro mejor producto de la tienda",
-          stock: 5,
-        },
-        {
-            id: "3",
-            name: "Otro producto mas",
-            description: "Este ya no es tan bueno",
-            stock: 5,
-          },
-          {
-            id: "4",
-            name: "Y otro",
-            description: "Este es algo bueno",
-            stock: 5,
-          },
-          {
-            id: "5",
-            name: "Si. otro más",
-            description: "y este apesta",
-            stock: 5,
-          }
-      ]
+    // const arrayData = [
+    //     {
+    //       id: "1",
+    //       name: "Mi producto",
+    //       description: "El mejor producto de la tienda",
+    //       stock: 9,
+    //     },
+    //     {
+    //       id: "2",
+    //       name: "Otro producto",
+    //       description: "Otro mejor producto de la tienda",
+    //       stock: 5,
+    //     },
+    //     {
+    //         id: "3",
+    //         name: "Otro producto mas",
+    //         description: "Este ya no es tan bueno",
+    //         stock: 5,
+    //       },
+    //       {
+    //         id: "4",
+    //         name: "Y otro",
+    //         description: "Este es algo bueno",
+    //         stock: 5,
+    //       },
+    //       {
+    //         id: "5",
+    //         name: "Si. otro más",
+    //         description: "y este apesta",
+    //         stock: 5,
+    //       }
+    //   ]
 
     const onAdd = (quantity) => {
         console.log(`Agregaste ${quantity} unidades`);
@@ -60,8 +60,9 @@ const ItemListContainer = (props) => {
 
     return (
         <Fragment>
+            <div className="container mx-auto mt-5">
             <br />
-            { arrayData.map(item => {
+            {/* { arrayData.map(item => {
                 return (
                     <div>
                         <h3>{item.name}</h3>
@@ -70,10 +71,11 @@ const ItemListContainer = (props) => {
                     </div>   
                 ) 
             })
-            }
+            } */}
             <br />
             <ItemList items={products} />
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
+            </div>
         </Fragment>
     );
 }

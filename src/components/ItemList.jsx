@@ -3,10 +3,10 @@ import Item from "./Item"
 
 const ItemList = ({items}) => {
     return (
-    <div>
+    <div className="d-flex flex-row flex-wrap justify-content-center card">
         {
             items.map((item)=>(
-                <Item item={item} />
+                <Item  key={item.id} item={item} />
             ))
         }
     </div>);  
