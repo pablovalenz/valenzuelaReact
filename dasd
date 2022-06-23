@@ -1,0 +1,53 @@
+[33mcommit 5830316dd50cf0e7b14a5f8bd7a67b15e67bb758[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Wed Jun 22 23:39:53 2022 -0300
+
+    primer entrega proyecto final
+
+[33mcommit a7df585fea26fd85879fa7d344081172a6522a61[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Mon Jun 20 21:22:53 2022 -0300
+
+    agregando estilos y desafio ItemDetail
+
+[33mcommit 29dc55bde2d334194e5d748735e68e632e095eab[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Sat Jun 18 07:54:02 2022 -0300
+
+    desafio culiadazo de promises, map, etc
+
+[33mcommit f4e964c47730e9737d7fc89160a71bd6ab2207fc[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Mon Jun 13 03:03:13 2022 -0300
+
+    agregando contador
+
+[33mcommit d9614547a7c8dc7d756550c93d265b1b4c39a14b[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Sun Jun 12 18:46:07 2022 -0300
+
+    arreglando props
+
+[33mcommit 9690ad397762d199732c16f4af10cce6b74ac3ba[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Wed Jun 8 20:37:24 2022 -0300
+
+    agregando CartWidget e ItemListContainer para desafio clase 3
+
+[33mcommit aeffaa009d2dc2f4d9e823c9a5891c81c76c7045[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Tue Jun 7 21:47:35 2022 -0300
+
+    agregando navbar y limpiando src
+
+[33mcommit 408107fbba1f5b9fc40afd56d44681be0540c006[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Mon Jun 6 21:13:27 2022 -0300
+
+    agregando navbar
+
+[33mcommit 70652ab44a12c6b9d43dbe3312c13cbba89be49e[m
+Author: pablovalenzuela <pjvalenzuela@gmail.com>
+Date:   Tue May 31 12:03:54 2022 -0300
+
+    Initialize project using Create React App

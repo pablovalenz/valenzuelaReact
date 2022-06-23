@@ -12,12 +12,12 @@ const Item = ({item}) => {
     };
 
     return (
-        <div className="card w-25" style={styles} key={item.id}>
+        <div className="mb-5 py-3 card w-25" style={styles} key={item.id}>
             <h3 className="text-3x1 text-gray-900 mt-2 font-medium title-font" style={styles}>
                 {item.name}
             </h3>
             <h5>$ {item.price}</h5>
-            <img src={item.img} alt={item.name} width="200"/>
+            <img className="itemList-card-img" src={item.img} alt={item.name} width="200"/>
             <p>{item.description}</p>
             <Link to={urlDetalle}>
                 <button>Ver detalle</button>
