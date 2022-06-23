@@ -18,7 +18,7 @@ function ItemCount ({ stock, initial, onAdd}) {
 
     
     return (
-        <div>
+        <div className="mx-auto">
             <button disabled={count <= 0} onClick={resta}>-</button>
             <span>{count}</span>
             <button disabled={count >= stock} onClick={suma}>+</button>

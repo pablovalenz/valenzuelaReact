@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Item = ({item}) => {
+
+    const urlDetalle = `/detalle/${item.id}`
 
     const styles = {
         width: "380px",
@@ -16,6 +19,9 @@ const Item = ({item}) => {
             <h5>$ {item.price}</h5>
             <img src={item.img} alt={item.name} width="200"/>
             <p>{item.description}</p>
+            <Link to={urlDetalle}>
+                <button>Ver detalle</button>
+            </Link>
             <hr />
             <br />
             

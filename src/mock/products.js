@@ -21,7 +21,7 @@ export const productos = [
     },
     {
         id: 3,
-        name: 'Remera',
+        name: 'Remera 3',
         price: 200,
         stock: 4,
 
@@ -31,7 +31,7 @@ export const productos = [
     },
     {
         id: 4,
-        name: 'Remera',
+        name: 'Remera 4',
         price: 200,
         stock: 4,
 
@@ -41,7 +41,7 @@ export const productos = [
     },
     {
         id: 5,
-        name: 'Remera',
+        name: 'Remera 5',
         price: 200,
         stock: 4,
 
@@ -51,7 +51,7 @@ export const productos = [
     },
     {
         id: 6,
-        name: 'Remera',
+        name: 'Remera 6',
         price: 200,
         stock: 4,
  
