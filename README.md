@@ -1,3 +1,6 @@
+#Comenzando el readme de mi proyecto
+Aca se incluirian todas las modificaciones y demases del proyecto
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
