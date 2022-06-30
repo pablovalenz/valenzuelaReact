@@ -16,6 +16,10 @@ function ItemCount ({ stock, initial, onAdd}) {
         setCount(parseInt(initial));
     }, [initial]) 
 
+    function addToCart(){
+        onAdd(count);
+    }
+
     
     return (
         <div className="mx-auto">
@@ -23,7 +27,7 @@ function ItemCount ({ stock, initial, onAdd}) {
             <span>{count}</span>
             <button disabled={count >= stock} onClick={suma}>+</button>
             <br />
-            <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <button disabled={stock <= 0} onClick={ addToCart }>Agregar al carrito</button>
         </div>
     )
 }
