@@ -2,11 +2,13 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { productos } from '../mock/products';
 import ItemDetail from './ItemDetail';
 import { useParams } from "react-router-dom";
+import PacmanLoader from 'react-spinners/PacmanLoader'
 
 
 const ItemDetailContainer = ({saludo}) => {
 
     const [product, setProduct] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
     console.log("parametros:",id)
 
@@ -25,6 +27,7 @@ const ItemDetailContainer = ({saludo}) => {
 
         traerProducto.then((res) => {
             setProduct(res);
+            setIsLoading(false);
         });
     }, [id]); 
     
@@ -35,7 +38,11 @@ const ItemDetailContainer = ({saludo}) => {
             <br />
             <div>{saludo}</div>
             <br />
-            <ItemDetail item={product}/>
+            {isLoading 
+                ? <PacmanLoader color={"blue"}/>
+                : <ItemDetail item={product}/>
+            }
+            
             </div>
         </Fragment>
     );

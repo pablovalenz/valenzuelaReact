@@ -4,22 +4,26 @@ import { Link } from 'react-router-dom'
 import CartContext from './CartContext'
 
 
-function ItemDetail({ item }) {
+
+const ItemDetail = ({ item }) => {
+
+  // importamos el value del context
+  const {addToCart, cart, isInCart} = useContext(CartContext)
+
+  const [cant, setCant] = useState(0)
 
   const [isAddedToCart, setAddedToCart] = React.useState(false);
 
-  const { AddToCart, cart } = useContext(CartContext);
-  console.log(cart);
-
 
   const onAdd = (quantity) => {
-    AddToCart(item, quantity)
-    console.log(`Agregaste ${quantity} unidades`);
+    setCant(`Agregaste ${quantity} unidades`);
     setAddedToCart(true);
+    addToCart(item, quantity)
 } 
 
   return (
     <div>
+        
         <h1>{item.name}</h1>
         <h5>$ {item.price}</h5>
         <img src={item.img} alt={item.name} width="200"/>
@@ -32,6 +36,7 @@ function ItemDetail({ item }) {
       }
       <br />
       <Link to="/cart" type="button" className="btn btn-primary">Finalizar compra</Link>
+      { isInCart(item.id) && <button>{item.name}Quitar del carrito</button> }
          
     </div>
   )

@@ -1,9 +1,29 @@
 import React from 'react'
+import { useContext } from 'react';
+import CartContext from './CartContext' 
 
-function Cart() {
+const Cart = () => {
+  const {cart} = useContext(CartContext)
+  console.log(cart)
   return (
-    <div>Cart</div>
-  )
-}
+    <div>
+      {
+        cart.map( item => (
+          <div className="mb-5 py-3 card w-25" key={item.id}>
+            <h3 className="text-3x1 text-gray-900 mt-2 font-medium title-font">
+                {item.name}
+            </h3>
+            <h5>$ {item.price}</h5>
+            <img className="itemList-card-img" src={item.img} alt={item.name} width="200"/>
+            <p>{item.description}</p>
+            <hr />
+            <br />
+            
+        </div>
+        ))
+      }
+    </div>
+  );
+};
 
 export default Cart
