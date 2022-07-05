@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
   // importamos el value del context
   const {addToCart, cart, isInCart} = useContext(CartContext)
 
-  const [cant, setCant] = useState(0)
+  const [cant, setCant] = useState([item])
 
   const [isAddedToCart, setAddedToCart] = React.useState(false);
 
@@ -36,7 +36,7 @@ const ItemDetail = ({ item }) => {
       }
       <br />
       <Link to="/cart" type="button" className="btn btn-primary">Finalizar compra</Link>
-      { isInCart(item.id) && <button>{item.name}Quitar del carrito</button> }
+      {/* { isInCart(item.id) && <button>{item.name}Quitar del carrito</button> } */}
          
     </div>
   )

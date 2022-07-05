@@ -10,7 +10,7 @@ const ItemDetailContainer = ({saludo}) => {
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
-    console.log("parametros:",id)
+    //console.log("parametros:",id)
 
     useEffect(() => {
         //apis, llamados al backEnd

@@ -4,12 +4,12 @@ function ItemCount ({ stock, initial, onAdd}) {
     
     const [count, setCount] = useState(parseInt(initial));
 
-    useEffect( () => {
-        console.log("render itemcount");
-        return(
-            () => { console.log("unmount itemcount")}
-        )
-    }, [])
+    // useEffect( () => {
+    //     console.log("render itemcount");
+    //     return(
+    //         () => { console.log("unmount itemcount")}
+    //     )
+    // }, [])
     
     const resta = () => {
         setCount(count -1);
