@@ -13,9 +13,10 @@ function CartWidget() {
     const {cart} = useContext(CartContext)  
     let itemsInCart = 0;
 
-    cart.map((item)=>{
+    cart.map( (item) => {
         itemsInCart = itemsInCart + item.quantity;
     })
+
 
     return (
         <div>
