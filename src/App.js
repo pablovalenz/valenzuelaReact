@@ -4,14 +4,13 @@ import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider} from './components/CartContext'
 import Cart from './components/Cart'
+import appFirebase from './services/firestore'
 
-import {testDatabase} from './services/firestore'
+
 
 function App() {
+
   return (
-
-    testDatabase()
-
     <div className="App mx-auto">
       <CartContextProvider>
         <BrowserRouter>

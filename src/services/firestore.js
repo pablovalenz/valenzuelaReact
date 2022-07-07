@@ -13,20 +13,25 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const appFirebase = initializeApp(firebaseConfig);
-const appFirestore = getFirestore(appFirestore);
+const appFirestore = getFirestore(appFirebase);
 
 export function testDatabase(){
     console.log(appFirestore)
 }
 
-export function getItems(){
+export async function getItems(){
     const remerasCollection = collection(appFirestore, "remeras");
 
-    const remerasSnapshot = getDocs(remerasCollection);
+    const remerasSnapshot = await getDocs(remerasCollection);
 
-    remerasSnapshot.then( res => {
-        console.log(res.docs[0].data());
-    })
+    let respuesta = remerasSnapshot.docs.map( doc => {
+        return {
+            ...doc.data(),
+            id: doc.id
+        }
+    })  
+
+    return respuesta;
 }
 
 export default appFirebase
