@@ -5,8 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider} from './components/CartContext'
 import Cart from './components/Cart'
 
+import {testDatabase} from './services/firestore'
+
 function App() {
   return (
+
+    testDatabase()
+
     <div className="App mx-auto">
       <CartContextProvider>
         <BrowserRouter>
