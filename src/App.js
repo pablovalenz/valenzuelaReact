@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider} from './components/CartContext'
 import Cart from './components/Cart'
-import appFirebase from './services/firestore'
+
 
 
 

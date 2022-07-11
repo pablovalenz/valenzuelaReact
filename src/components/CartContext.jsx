@@ -10,13 +10,15 @@ export function CartContextProvider( props ){
     const [cart, setCart] = useState([]);
 
     //funcion para agreagar al carrito
-    const addToCart = (item, quantity,cant)=> {
+    const addToCart = (item, quantity, cant)=> {
         if (isInCart(item.id)) {
             //sumar catidad
-            console.log('ya esta en el carrito');
+            const idToAdd = item.id
+            let itemToAdd = cart.find( cadaItem => cadaItem.id === idToAdd)
+            itemToAdd.quantity += quantity;
         }else{
             // console.log(item, quantity)
-        setCart([...cart,{...item, quantity, cant}]);
+        setCart([...cart,{...item, quantity: quantity}]);
         }
         
     };
@@ -38,8 +40,8 @@ export function CartContextProvider( props ){
     //function qtyInCart(){}
 
     //funcion para eliminar items del carrito
-    const removeItem = (prod) => {
-        setCart(cart.filter(item => item.id !== prod))
+    const removeItem = (id) => {
+        setCart(cart.filter(item => item.id !== id))
     }
 
     //funcion para eliminar todos los items del carrito

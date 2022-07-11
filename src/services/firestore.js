@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, getDoc, doc, collection} from "firebase/firestore" 
+import {getFirestore, getDocs, getDoc, query, where, doc, collection} from "firebase/firestore" 
 
 const firebaseConfig = {
   apiKey: "AIzaSyB9qfeHbRGt88VsQnv4gbmJSnD18qEmhzo",
@@ -30,6 +30,23 @@ export async function getItems(){
             id: doc.id
         }
     })  
+
+    return respuesta;
+}
+
+export async function traerProductosDeCategoria(idcategory){
+    const remerasCollection = collection(appFirestore, 'remeras');
+
+    const q = query(remerasCollection, where("category", "==", idcategory));
+
+    const remerasSnapshot = await getDocs(q);
+
+    let respuesta = remerasSnapshot.docs.map( doc => {
+        return {
+            ...doc.data(),
+            id: doc.id
+        }
+    }) 
 
     return respuesta;
 }

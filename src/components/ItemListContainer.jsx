@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";    
-import { getItems } from '../services/firestore';
+import { getItems, traerProductosDeCategoria } from '../services/firestore';
 
 
 const ItemListContainer = (props) => {
@@ -13,12 +13,26 @@ const ItemListContainer = (props) => {
 
     useEffect(()=>{
     
-
-        getItems()
+      if(categoryId) {
+      
+      traerProductosDeCategoria(categoryId)
         .then((res) => {
             setProducts(res);
         })
-    }, [categoryId]);
+        .catch((error) => {
+            console.log(error);
+        });
+      } else {
+        getItems()
+            .then((res) => {
+                setProducts(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+      }
+    }, [categoryId]);    
+        
 
   
        
