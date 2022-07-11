@@ -3,9 +3,28 @@ import { useContext } from 'react';
 import CartContext from './CartContext' 
 import { Link } from 'react-router-dom'
 // import ItemCart from './ItemCart/itemCart';
+import { createBuyOrder } from '../services/firestore'
 
 const Cart = () => {
   const {cart, removeItem, clearCart, totalPrice} = useContext(CartContext);
+
+ 
+function handleBuyOrder(){
+  const dataOrder = {
+    buyer: {
+      name: "React 37070",
+      phone: 1234567789,
+      email: "react37070@coder.abc"
+    },
+    items: cart,
+    total: totalPrice()
+  }
+
+  createBuyOrder(dataOrder).then ( (orderDataCreated) => {
+    clearCart();
+  })
+  
+}
 
   if (cart.length === 0){
     return (
@@ -42,6 +61,7 @@ const Cart = () => {
         Total: {totalPrice()}
       </p>
       <button style={{color:"red"}} onClick={() => clearCart()}>vaciar carrito</button>
+      <button style={{color:"green"}} onClick={ handleBuyOrder }>finalizar compra</button>
 
 
     </>

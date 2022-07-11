@@ -46,6 +46,7 @@ const ItemDetailContainer = ({saludo}) => {
             }
             
             </div>
+            {/* <button onClick={exportDataToFirestore}>Prueba guardar item</button> */}
         </Fragment>
     );
 }

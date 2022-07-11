@@ -30,7 +30,7 @@ export const productos = [
         description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
-        id: 5,
+        id: 3,
         name: 'Gorra 2',
         price: 200,
         stock: 4,
@@ -40,7 +40,7 @@ export const productos = [
         description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
-        id: 6,
+        id: 4,
         name: 'Remera 5',
         price: 200,
         stock: 4,
@@ -50,7 +50,7 @@ export const productos = [
         description: 'lorem ipsun ipsum lorem ipsum lorem impsun lkhjsdf kjdfñasddfj paadysdt patys y jamon',
     },
     {
-        id: 7,
+        id: 5,
         name: 'Remera 6',
         price: 200,
         stock: 4,
