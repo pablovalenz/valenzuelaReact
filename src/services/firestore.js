@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, collection} from "firebase/firestore" 
+import {getFirestore, getDocs, getDoc, doc, collection} from "firebase/firestore" 
 
 const firebaseConfig = {
   apiKey: "AIzaSyB9qfeHbRGt88VsQnv4gbmJSnD18qEmhzo",
@@ -32,6 +32,15 @@ export async function getItems(){
     })  
 
     return respuesta;
+}
+
+export async function traerUnProducto(id){
+    // const remerasCollection = collection(appFirestore, "remeras");
+    const docref = doc(appFirestore, "remeras", id);
+
+    const docSnapshot = await getDoc(docref);
+
+    return { id: docSnapshot.id, ...docSnapshot.data()};
 }
 
 export default appFirebase

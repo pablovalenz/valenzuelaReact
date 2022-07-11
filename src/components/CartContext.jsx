@@ -28,8 +28,13 @@ export function CartContextProvider( props ){
     }
 
     //funcion para calcular $ del carrito
+    const totalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+    }
 
     //funcionn para calcular el total de unidades que tengo en el carrito y mostrarlas en el cartWidget
+    const TotalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0);
+
     //function qtyInCart(){}
 
     //funcion para eliminar items del carrito
@@ -42,9 +47,20 @@ export function CartContextProvider( props ){
         setCart([])
     };
 
+    
+
 //3- pasamos al Provider el value para los componentes que consuman el context
 //4- retornamos el context provider con el value
-return <CartContext.Provider value={{ cart, otroValor: "Hola", addToCart, clearCart, isInCart, removeItem }}>
+return <CartContext.Provider value={{  
+    otroValor: "Hola", 
+    addToCart, 
+    clearCart, 
+    isInCart, 
+    removeItem, 
+    totalPrice, 
+    TotalProducts,
+    cart
+    }}>
     {props.children}
 </CartContext.Provider>
 }

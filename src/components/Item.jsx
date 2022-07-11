@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({item}) => {
 
-    const urlDetalle = `/detalle/${item.id}`
+    const urlDetalle = `/detalle/${item.id}`;
 
     const styles = {
         width: "380px",

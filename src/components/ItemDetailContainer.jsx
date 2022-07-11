@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { productos } from '../mock/products';
+// import { productos } from '../mock/products';
 import ItemDetail from './ItemDetail';
 import { useParams } from "react-router-dom";
 import PacmanLoader from 'react-spinners/PacmanLoader'
+import { traerUnProducto } from '../services/firestore'
 
 
 const ItemDetailContainer = ({saludo}) => {
@@ -13,19 +14,20 @@ const ItemDetailContainer = ({saludo}) => {
     //console.log("parametros:",id)
 
     useEffect(() => {
-        //apis, llamados al backEnd
-        const traerProducto = new Promise ((res, rej) => {
-            setTimeout(() => {
-                let idNum = parseInt(id)
-                const itemFound = productos.find ( detalle => {
-                    return detalle.id === parseInt(idNum);
-                })
-                res(itemFound);
-                // res(productos[itemNum]);
-            }, 2000);
-        });
+        // //apis, llamados al backEnd
+        // const traerProducto = new Promise ((res, rej) => {
+        //     setTimeout(() => {
+        //         let idNum = parseInt(id)
+        //         const itemFound = productos.find ( detalle => {
+        //             return detalle.id === parseInt(idNum);
+        //         })
+        //         res(itemFound);
+        //         // res(productos[itemNum]);
+        //     }, 2000);
+        // });
 
-        traerProducto.then((res) => {
+        traerUnProducto(id)
+        .then((res) => {
             setProduct(res);
             setIsLoading(false);
         });

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import carri from '../assets/carri.png';
 import CartContext from './CartContext';
+import { Link } from 'react-router-dom'
 
 
 function CartWidget() {
@@ -13,7 +14,7 @@ function CartWidget() {
     const {cart} = useContext(CartContext)  
     let itemsInCart = 0;
 
-    cart.map( (item) => {
+    cart.map( (item ) => {
         itemsInCart = itemsInCart + item.quantity;
     })
 
@@ -23,7 +24,8 @@ function CartWidget() {
             <div className="itemsInCart">
                 {itemsInCart}
             </div>
-            <img style={stylesImg} src={carri}/>
+            
+            <Link to='./cart'><img style={stylesImg} src={carri}/></Link>
         </div>
     )
 }

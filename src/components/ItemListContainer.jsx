@@ -14,7 +14,8 @@ const ItemListContainer = (props) => {
     useEffect(()=>{
     
 
-        getItems().then((res) => {
+        getItems()
+        .then((res) => {
             setProducts(res);
         })
     }, [categoryId]);
